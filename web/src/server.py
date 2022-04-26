@@ -39,7 +39,7 @@ if __name__ == '__main__':
         config.add_route('product', '/product')
         config.add_view(product_page, route_name='product', renderer='json')
 
-        config.add_route('EmpathyMap', '/public/EmpathyMap.png')
+        config.add_route('EmpathyMap', '/Images/EmpathyMap.png')
         config.add_view(empathyMapImg, route_name='EmpathyMap')
 
         config.add_static_view(name='/', path='./public', cache_max_age=3600)
