@@ -4,6 +4,38 @@ body {
   font-size: 16pt;
   box-sizing: bodrder-box;
   background-color: #f0fff4;
+
+
+}
+
+.separator {
+  font-size: calc(1rem + 1vw);
+  color: var(--accent-color);
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+  margin: calc(2rem + 3vw) auto;
+}
+
+.separator::before, .separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--dark-color);
+}
+
+.separator::before {
+  margin-right: 1rem;
+}
+
+.separator::after {
+  margin-left: 1rem;
+}
+
+.centered {
+  text-align: center;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .hero {
@@ -16,6 +48,22 @@ aside {
   padding: 1rem;
 
 
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
 
 @media screen and (min-width:2000px) {
@@ -54,12 +102,16 @@ aside {
   color: #32e65f;
 }
 
+.filler {
+  flex: 1 1 auto;
+}
+
 :root {
   --primary-color: #07f;
   --accent-color: rgba(231, 109, 90, 1);
   --accent-color-dark: rgba(226, 77, 54, 1);
   --accent-color: #39b859;
-  --accent-color-dark: rgba(71, 88, 133, 1);
+  --accent-color-dark: #133d1e;
   --dark-color: rgba(104, 109, 115, 1);
   --dark-color-alt: rgba(156, 160, 165, 1);
   --medium-color: #bbb;
@@ -94,6 +146,57 @@ aside {
 
 
 
+.btn {
+  border: 1px solid var(--accent-color);
+  display: inline-flex;
+  font-size: calc(1rem + 0.6vw);
+  cursor: pointer;
+  padding: var(--padding-med) var(--padding-lg);
+  border-radius: var(--border-radius);
+  background: var(--accent-color);
+  color: white;
+  user-select: none;
+  margin: 0px 0.25rem 0.75rem 0px;
+}
+
+.btn:hover {
+  background: var(--accent-color-dark);
+}
+
+.btn.small {
+  font-size: calc(0.5rem + 0.5vw);
+  padding: 0.4rem 0.8rem;
+}
+
+.btn.large {
+  font-size: calc(1.2rem + 1.4vw);
+  padding: var(--padding-lg) var(--padding-xxl);
+}
+
+.btn.outline {
+  background: rgba(240, 239, 234, 1);
+  border: 1px solid var(--dark-color);
+  color: #333;
+}
+
+.btn.primary {
+  background: var(--accent-color);
+  color: white;
+}
+
+.btn.warning {
+  background: var(--warning-color);
+  color: white;
+}
+
+.btn-grid {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.btn.pill {
+  border-radius: var(--rounded-radius);
+}
 
 /* ------------ select ----- */
 
