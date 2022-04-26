@@ -20,6 +20,10 @@ def product_page(req):
     return FileResponse("templates/product.html")
 
 
+def empathyMapImg(req):
+    return FileResponse("public/EmpathyMap.png")
+
+
 def home_page(req):
     return FileResponse("templates/home.html")
 
@@ -34,6 +38,9 @@ if __name__ == '__main__':
 
         config.add_route('product', '/product')
         config.add_view(product_page, route_name='product', renderer='json')
+
+        config.add_route('EmpathyMap', '/public/EmpathyMap.png')
+        config.add_view()
 
         config.add_static_view(name='/', path='./public', cache_max_age=3600)
         app = config.make_wsgi_app()
