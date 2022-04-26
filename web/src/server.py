@@ -21,7 +21,7 @@ def product_page(req):
 
 
 def empathyMapImg(req):
-    return FileResponse("public/EmpathyMap.png")
+    return FileResponse("templates/Images/EmpathyMap.png")
 
 
 def home_page(req):
