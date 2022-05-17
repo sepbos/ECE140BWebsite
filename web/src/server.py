@@ -29,7 +29,7 @@ def benefits_page(req):
 
 
 def interaction_page(req):
-    return FileResponse("/templates/interaction.html")
+    return FileResponse("web/src/templates/benefits.html")
 
 
 def home_page(req):
