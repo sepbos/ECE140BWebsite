@@ -48,11 +48,11 @@ if __name__ == '__main__':
         config.add_view(product_page, route_name='product', renderer='json')
 
         config.add_route('benefits', '/benefits')
-        config.add_view(benefits_page, route_name='benefits', renderer='json')
+        config.add_view(benefits_page, route_name='benefits')
 
         config.add_route('interaction', '/interaction')
         config.add_view(interaction_page,
-                        route_name='interaction', renderer='json')
+                        route_name='interaction')
 
         config.add_route('notes', '/notes')
         config.add_view(notes_page, route_name='notes')
