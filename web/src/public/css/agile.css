@@ -64,8 +64,14 @@ img.LeftImage {
 aside {
   margin: 0rem;
   padding: 1rem;
+}
 
+.div_item_list {
+  padding-left: 3rem;
+}
 
+.button_single_out {
+  padding-top: 3rem;
 }
 
 a:link {
