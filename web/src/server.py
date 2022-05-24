@@ -32,6 +32,14 @@ def interaction_page(req):
     return FileResponse("templates/interaction.html")
 
 
+def costs_page(req):
+    return FileResponse("templates/costs.html")
+
+
+def revenue_page(req):
+    return FileResponse("templates/revenue.html")
+
+
 def home_page(req):
     return FileResponse("templates/home.html")
 
@@ -54,8 +62,12 @@ if __name__ == '__main__':
         config.add_view(interaction_page,
                         route_name='interaction')
 
-        config.add_route('notes', '/notes')
-        config.add_view(notes_page, route_name='notes')
+        config.add_route('revenue', '/revenue')
+        config.add_view(revenue_page,
+                        route_name='revenue')
+
+        config.add_route('costs', '/costs')
+        config.add_view(costs_page, route_name='costs')
 
         config.add_static_view(name='/', path='./public', cache_max_age=3600)
         app = config.make_wsgi_app()
