@@ -40,6 +40,10 @@ def revenue_page(req):
     return FileResponse("templates/revenue.html")
 
 
+def pivot_page(req):
+    return FileResponse("templates/pivot.html")
+
+
 def home_page(req):
     return FileResponse("templates/home.html")
 
@@ -68,6 +72,9 @@ if __name__ == '__main__':
 
         config.add_route('costs', '/costs')
         config.add_view(costs_page, route_name='costs')
+
+        config.add_route('pivot', '/pivot')
+        config.add_view(pivot_page, route_name='pivot')
 
         config.add_static_view(name='/', path='./public', cache_max_age=3600)
         app = config.make_wsgi_app()
